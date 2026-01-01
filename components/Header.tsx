@@ -27,7 +27,7 @@ export default function Header() {
     <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-[#0a1628]/95 backdrop-blur-xl shadow-[0_5px_30px_rgba(0,0,0,0.5)] py-2' : 'bg-transparent py-4'}`}>
       {/* Top Bar */}
       <div className={`border-b border-white/5 hidden md:block transition-all duration-300 ${scrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-auto opacity-100 pb-2'}`}>
-        <div className="container mx-auto px-6 md:px-12">
+        <div className="container mx-auto px-8 md:px-24 lg:px-32">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-6">
               <span className="text-[10px] font-bold tracking-widest text-[#8a9ab0] uppercase">Follow us</span>
@@ -52,7 +52,7 @@ export default function Header() {
       </div>
 
       <nav className="pt-2">
-        <div className="container mx-auto px-6 md:px-12">
+        <div className="container mx-auto px-8 md:px-24 lg:px-32">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a href="#" className="text-2xl font-black tracking-tighter text-white italic">

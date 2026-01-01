@@ -19,15 +19,21 @@ export default function Hero() {
 
       {/* Animated Particles/Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(10,22,40,0.95)_0%,rgba(10,22,40,0.4)_50%,transparent_100%)] z-0" />
-      <div className="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-10 z-0 pointer-events-none"></div>
+      <div 
+        className="absolute inset-0 opacity-10 z-0 pointer-events-none"
+        style={{ 
+          backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}
+      ></div>
 
       {/* Floating Elements */}
       <div className="absolute top-1/4 right-[10%] w-20 h-20 bg-[#e31e24] rounded-full blur-[80px] opacity-60 animate-pulse"></div>
       <div className="absolute bottom-1/4 left-[10%] w-32 h-32 bg-blue-600 rounded-full blur-[100px] opacity-40 animate-pulse" style={{ animationDelay: '1s' }}></div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="max-w-[800px]">
+      <div className="container mx-auto px-8 md:px-24 lg:px-32 relative z-10 flex items-center h-full">
+        <div className="max-w-[900px]">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full mb-8 animate-fadeInUp">
             <span className="w-2 h-2 bg-[#e31e24] rounded-full animate-ping"></span>
             <span className="text-[#e31e24] text-xs font-bold tracking-widest uppercase">New Season Available</span>
@@ -51,7 +57,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-5 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
             <button className="group relative px-8 py-4 bg-[#e31e24] text-white font-bold tracking-wider rounded overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(227,30,36,0.5)] hover:-translate-y-1">
               <span className="relative z-10 flex items-center gap-3">
-                <FontAwesomeIcon icon={faPlay} />
+                <FontAwesomeIcon icon={faPlay} className="group-hover:scale-110 transition-transform" />
                 PLAY FOR FREE
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#c71a1f] to-[#e31e24] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
@@ -60,16 +66,24 @@ export default function Hero() {
             <div className="flex gap-3">
               <a
                 href="#"
-                className="flex items-center gap-3 px-5 py-3 bg-[#0f1929]/80 border border-white/10 rounded text-white backdrop-blur-md hover:bg-white hover:text-[#0a1628] hover:border-white transition-all duration-300 group"
+                className="group flex items-center gap-3 px-5 py-3 bg-[#0f1929]/80 border border-white/10 rounded text-white backdrop-blur-md hover:bg-white hover:text-[#0a1628] hover:border-white transition-all duration-300"
               >
                 <FontAwesomeIcon icon={faGooglePlay} className="text-2xl group-hover:scale-110 transition-transform" />
+                <div className="text-left hidden sm:block">
+                  <span className="text-[9px] block opacity-70">GET IT ON</span>
+                  <span className="text-xs font-bold">Google Play</span>
+                </div>
               </a>
               
               <a
                 href="#"
-                className="flex items-center gap-3 px-5 py-3 bg-[#0f1929]/80 border border-white/10 rounded text-white backdrop-blur-md hover:bg-white hover:text-[#0a1628] hover:border-white transition-all duration-300 group"
+                className="group flex items-center gap-3 px-5 py-3 bg-[#0f1929]/80 border border-white/10 rounded text-white backdrop-blur-md hover:bg-white hover:text-[#0a1628] hover:border-white transition-all duration-300"
               >
                 <FontAwesomeIcon icon={faApple} className="text-2xl group-hover:scale-110 transition-transform" />
+                <div className="text-left hidden sm:block">
+                  <span className="text-[9px] block opacity-70">Download on</span>
+                  <span className="text-xs font-bold">App Store</span>
+                </div>
               </a>
             </div>
           </div>

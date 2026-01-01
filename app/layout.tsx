@@ -20,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="scroll-smooth">
-      <body className={`${rajdhani.className} antialiased bg-[#0a1628] text-white overflow-x-hidden`}>
+      <body 
+        className={`${rajdhani.className} antialiased bg-[#0a1628] text-white overflow-x-hidden`}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

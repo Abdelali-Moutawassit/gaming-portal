@@ -38,7 +38,7 @@ export default function News() {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="absolute -left-20 top-40 w-60 h-60 bg-[#e31e24]/5 rounded-full blur-3xl"></div>
       
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+      <div className="container mx-auto px-8 md:px-24 lg:px-32 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
             <span className="text-[#e31e24] font-bold tracking-[3px] text-xs block mb-3 uppercase">From the Blog</span>
@@ -55,7 +55,7 @@ export default function News() {
           {newsItems.map((item, index) => (
             <article 
               key={index}
-              className="group bg-[#0a1628] rounded-xl overflow-hidden border border-white/5 hover:border-[#e31e24]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+              className="group bg-[#0a1628] rounded-xl overflow-hidden border border-white/5 hover:border-[#e31e24]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] cursor-pointer"
             >
               <div className="relative h-64 overflow-hidden">
                 <Image
@@ -67,6 +67,10 @@ export default function News() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] to-transparent opacity-60"></div>
                 <div className="absolute top-4 left-4 bg-[#e31e24] text-white text-[10px] font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-lg">
                   {item.category}
+                </div>
+                {/* Read Time Badge */}
+                <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  5 min read
                 </div>
               </div>
               

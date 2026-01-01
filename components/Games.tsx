@@ -2,7 +2,9 @@
 
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faStar, faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faStar, faGamepad, faUsers, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import GameModal from './GameModal';
 
 const games = [
   {
@@ -10,7 +12,16 @@ const games = [
     description: 'Engage in intergalactic battles, explore unknown galaxies, and command your fleet.',
     image: 'https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=600&h=800&fit=crop&q=80',
     rating: 4.8,
-    category: 'Sci-Fi'
+    category: 'Sci-Fi',
+    players: '2.5M+',
+    playTime: '150h+',
+    downloads: '15M+',
+    fullDescription: 'Embark on an epic space odyssey in Space Wars. Command your fleet across uncharted galaxies, engage in massive intergalactic battles, and forge alliances with alien civilizations. With stunning visuals, deep strategic gameplay, and an ever-expanding universe, Space Wars offers endless hours of exploration and conquest.',
+    screenshots: [
+      'https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=400&h=300&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=400&h=300&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1614732484003-ef9881555dc3?w=400&h=300&fit=crop&q=80'
+    ]
   },
   {
     title: 'RETURN OF THE CARS',
@@ -64,9 +75,17 @@ const games = [
 ];
 
 export default function Games() {
+  const [selectedGame, setSelectedGame] = useState<typeof games[0] | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleGameClick = (game: typeof games[0]) => {
+    setSelectedGame(game);
+    setIsModalOpen(true);
+  };
+
   return (
     <section id="games" className="py-24 bg-[#0a1628] relative">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-8 md:px-24 lg:px-32">
         <div className="text-center mb-16">
           <span className="text-[#e31e24] font-bold tracking-[3px] text-xs uppercase mb-3 block">Choose Your Path</span>
           <h2 className="text-4xl md:text-5xl font-black text-white tracking-wide uppercase">
@@ -78,7 +97,8 @@ export default function Games() {
           {games.map((game, index) => (
             <div
               key={index}
-              className="group relative bg-[#0f1929] rounded-xl overflow-hidden border border-white/5 hover:border-[#e31e24] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(227,30,36,0.15)]"
+              className="group relative bg-[#0f1929] rounded-xl overflow-hidden border border-white/5 hover:border-[#e31e24] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(227,30,36,0.15)] cursor-pointer"
+              onClick={() => handleGameClick(game)}
             >
               {/* Image Container */}
               <div className="relative h-[400px] overflow-hidden">
@@ -99,6 +119,18 @@ export default function Games() {
 
                 <div className="absolute top-4 left-4 bg-[#e31e24] text-white px-3 py-1 text-[10px] font-bold tracking-wider rounded uppercase">
                   {game.category}
+                </div>
+
+                {/* Additional Info Badges */}
+                <div className="absolute bottom-4 left-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center gap-1 bg-black/60 backdrop-blur-md text-white px-2 py-1 rounded text-[10px] font-bold">
+                    <FontAwesomeIcon icon={faUsers} />
+                    {game.players}
+                  </div>
+                  <div className="flex items-center gap-1 bg-black/60 backdrop-blur-md text-white px-2 py-1 rounded text-[10px] font-bold">
+                    <FontAwesomeIcon icon={faDownload} />
+                    {game.downloads}
+                  </div>
                 </div>
 
                 {/* Hover Action */}
@@ -131,6 +163,15 @@ export default function Games() {
           </button>
         </div>
       </div>
+
+      {/* Game Modal */}
+      {selectedGame && (
+        <GameModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          game={selectedGame}
+        />
+      )}
     </section>
   );
 }

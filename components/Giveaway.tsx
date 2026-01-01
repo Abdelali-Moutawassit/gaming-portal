@@ -21,12 +21,12 @@ const giveaways = [
 export default function Giveaway() {
   return (
     <section id="store" className="py-24 bg-[#0f1929] relative">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-8 md:px-24 lg:px-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {giveaways.map((giveaway, index) => (
             <div
               key={index}
-              className="group relative h-[450px] rounded-2xl overflow-hidden bg-[#0a1628] border border-white/5 hover:border-[#e31e24]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+              className="group relative h-[450px] rounded-2xl overflow-hidden bg-[#0a1628] border border-white/5 hover:border-[#e31e24]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:-translate-y-2 cursor-pointer"
             >
               {/* Background Image */}
               <div
