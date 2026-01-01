@@ -43,9 +43,9 @@ export default function Header() {
                 ))}
               </div>
             </div>
-            <div className="flex items-center gap-2 text-xs font-medium text-[#8a9ab0]">
+            <div className="flex items-center gap-2 text-xs font-medium text-[#FFFFFF]">
               <FontAwesomeIcon icon={faEnvelope} className="text-[#e31e24]" />
-              <span>support@gamingportal.com</span>
+              <span>abdelalimoutawassit99@gmail.com</span>
             </div>
           </div>
         </div>

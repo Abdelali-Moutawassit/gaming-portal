@@ -97,21 +97,21 @@ export default function Footer() {
                   <FontAwesomeIcon icon={faMapMarkerAlt} />
                 </div>
                 <span className="text-[#8a9ab0] text-sm leading-6 flex-1 pt-2">
-                  123 Gaming Street, Digital City,<br />
-                  Virtual World 10101
+                  30 BD TAZA, MOHAMMEDIA City,<br />
+                  Morroco
                 </span>
               </li>
               <li className="flex items-center gap-4 group">
                 <div className="w-10 h-10 rounded-full bg-[#0f1929] flex items-center justify-center text-[#e31e24] group-hover:bg-[#e31e24] group-hover:text-white transition-all">
                   <FontAwesomeIcon icon={faPhone} />
                 </div>
-                <span className="text-[#8a9ab0] text-sm pt-1">+1 (234) 567-8900</span>
+                <span className="text-[#8a9ab0] text-sm pt-1">+212 605559854</span>
               </li>
               <li className="flex items-center gap-4 group">
                 <div className="w-10 h-10 rounded-full bg-[#0f1929] flex items-center justify-center text-[#e31e24] group-hover:bg-[#e31e24] group-hover:text-white transition-all">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
-                <span className="text-[#8a9ab0] text-sm pt-1">contact@gamingportal.com</span>
+                <span className="text-[#8a9ab0] text-sm pt-1">abdelalimoutawassit99@gmail.com</span>
               </li>
             </ul>
           </div>
