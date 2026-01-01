@@ -20,8 +20,8 @@ const giveaways = [
 
 export default function Giveaway() {
   return (
-    <section className="py-24 bg-[#0f1929] relative">
-      <div className="container mx-auto px-5">
+    <section id="store" className="py-24 bg-[#0f1929] relative">
+      <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {giveaways.map((giveaway, index) => (
             <div

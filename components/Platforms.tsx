@@ -13,11 +13,11 @@ const platforms = [
 
 export default function Platforms() {
   return (
-    <section className="py-24 bg-[#0f1929] relative overflow-hidden">
+    <section id="platforms" className="py-24 bg-[#0f1929] relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid-pattern.png')] opacity-[0.03]"></div>
       
-      <div className="container mx-auto px-5 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {platforms.map((platform, index) => (
             <div

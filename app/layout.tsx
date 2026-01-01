@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={` antialiased`}>
+    <html lang="fr" className="scroll-smooth">
+      <body className={`${rajdhani.className} antialiased bg-[#0a1628] text-white overflow-x-hidden`}>
         {children}
       </body>
     </html>

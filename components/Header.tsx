@@ -27,7 +27,7 @@ export default function Header() {
     <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-[#0a1628]/95 backdrop-blur-xl shadow-[0_5px_30px_rgba(0,0,0,0.5)] py-2' : 'bg-transparent py-4'}`}>
       {/* Top Bar */}
       <div className={`border-b border-white/5 hidden md:block transition-all duration-300 ${scrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-auto opacity-100 pb-2'}`}>
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-6">
               <span className="text-[10px] font-bold tracking-widest text-[#8a9ab0] uppercase">Follow us</span>
@@ -52,7 +52,7 @@ export default function Header() {
       </div>
 
       <nav className="pt-2">
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a href="#" className="text-2xl font-black tracking-tighter text-white italic">
@@ -67,14 +67,22 @@ export default function Header() {
             </button>
             
             <ul className={`flex-col md:flex-row gap-8 absolute md:relative top-full left-0 md:top-0 w-full md:w-auto bg-[#0a1628] md:bg-transparent p-5 md:p-0 shadow-2xl md:shadow-none ${menuOpen ? 'flex' : 'hidden md:flex'}`}>
-              {['GAME', 'NEWS', 'STORE', 'ESPORTS', 'SUPPORT', 'PASS'].map((item, index) => (
+              {[
+                { name: 'HOME', link: '#home' },
+                { name: 'GAMES', link: '#games' },
+                { name: 'NEWS', link: '#news' },
+                { name: 'STORE', link: '#store' },
+                { name: 'PLATFORMS', link: '#platforms' },
+                { name: 'SUPPORT', link: '#support' }
+              ].map((item, index) => (
                 <li key={index}>
                   <a
-                    href="#"
+                    href={item.link}
+                    onClick={() => setMenuOpen(false)}
                     className={`text-xs font-bold tracking-[2px] transition-all relative py-2 block hover:text-[#e31e24] duration-300 ${index === 0 ? 'text-[#e31e24]' : 'text-white'}`}
                   >
-                    {item}
-                    <span className={`absolute bottom-0 left-0 h-0.5 bg-[#e31e24] transition-all duration-300 ${index === 0 ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                    {item.name}
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-[#e31e24] transition-all duration-300 w-0 group-hover:w-full`}></span>
                   </a>
                 </li>
               ))}

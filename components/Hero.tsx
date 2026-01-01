@@ -6,12 +6,12 @@ import { faPlay, faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[850px] flex items-center bg-[#0a1628] mt-[0px] overflow-hidden pt-[100px]">
+    <section id="home" className="relative min-h-[850px] flex items-center bg-[#0a1628] mt-[0px] overflow-hidden pt-[100px]">
       {/* Background Image with Parallax Effect */}
       <div 
         className="absolute top-0 right-0 w-full md:w-[70%] h-full bg-cover bg-center z-0"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1600&h=900&fit=crop)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1600&h=900&fit=crop&q=80)',
           maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%)',
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%)'
         }}
@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="absolute bottom-1/4 left-[10%] w-32 h-32 bg-blue-600 rounded-full blur-[100px] opacity-40 animate-pulse" style={{ animationDelay: '1s' }}></div>
 
       {/* Content */}
-      <div className="container mx-auto px-5 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-[800px]">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full mb-8 animate-fadeInUp">
             <span className="w-2 h-2 bg-[#e31e24] rounded-full animate-ping"></span>

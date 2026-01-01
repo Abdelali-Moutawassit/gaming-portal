@@ -33,12 +33,12 @@ const newsItems = [
 
 export default function News() {
   return (
-    <section className="py-24 bg-[#0f1929] relative overflow-hidden">
+    <section id="news" className="py-24 bg-[#0f1929] relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="absolute -left-20 top-40 w-60 h-60 bg-[#e31e24]/5 rounded-full blur-3xl"></div>
       
-      <div className="container mx-auto px-5 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
             <span className="text-[#e31e24] font-bold tracking-[3px] text-xs block mb-3 uppercase">From the Blog</span>

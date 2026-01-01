@@ -65,8 +65,8 @@ const games = [
 
 export default function Games() {
   return (
-    <section className="py-24 bg-[#0a1628] relative">
-      <div className="container mx-auto px-5">
+    <section id="games" className="py-24 bg-[#0a1628] relative">
+      <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <span className="text-[#e31e24] font-bold tracking-[3px] text-xs uppercase mb-3 block">Choose Your Path</span>
           <h2 className="text-4xl md:text-5xl font-black text-white tracking-wide uppercase">
