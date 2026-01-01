@@ -97,6 +97,8 @@ export default function Games() {
           {games.map((game, index) => (
             <div
               key={index}
+              data-reveal
+              style={{ animationDelay: `${index * 0.1}s` }}
               className="group relative bg-[#0f1929] rounded-xl overflow-hidden border border-white/5 hover:border-[#e31e24] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(227,30,36,0.15)] cursor-pointer"
               onClick={() => handleGameClick(game)}
             >

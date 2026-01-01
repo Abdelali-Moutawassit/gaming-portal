@@ -26,6 +26,8 @@ export default function Giveaway() {
           {giveaways.map((giveaway, index) => (
             <div
               key={index}
+              data-reveal="scale"
+              style={{ animationDelay: `${index * 0.2}s` }}
               className="group relative h-[450px] rounded-2xl overflow-hidden bg-[#0a1628] border border-white/5 hover:border-[#e31e24]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:-translate-y-2 cursor-pointer"
             >
               {/* Background Image */}

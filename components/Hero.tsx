@@ -9,6 +9,7 @@ export default function Hero() {
     <section id="home" className="relative min-h-[850px] flex items-center bg-[#0a1628] mt-[0px] overflow-hidden pt-[100px]">
       {/* Background Image with Parallax Effect */}
       <div 
+        data-parallax="0.3"
         className="absolute top-0 right-0 w-full md:w-[70%] h-full bg-cover bg-center z-0"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1600&h=900&fit=crop&q=80)',

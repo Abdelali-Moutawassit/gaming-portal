@@ -51,6 +51,8 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
+              data-reveal="scale"
+              style={{ animationDelay: `${index * 0.2}s` }}
               className="group relative bg-gradient-to-br from-[#1a2940] to-[#0f1929] border border-white/5 rounded-2xl p-8 hover:border-[#e31e24]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
             >
               {/* Quote Icon */}

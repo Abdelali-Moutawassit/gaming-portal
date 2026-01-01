@@ -55,6 +55,8 @@ export default function News() {
           {newsItems.map((item, index) => (
             <article 
               key={index}
+              data-reveal
+              style={{ animationDelay: `${index * 0.15}s` }}
               className="group bg-[#0a1628] rounded-xl overflow-hidden border border-white/5 hover:border-[#e31e24]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] cursor-pointer"
             >
               <div className="relative h-64 overflow-hidden">

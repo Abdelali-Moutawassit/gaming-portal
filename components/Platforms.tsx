@@ -28,6 +28,8 @@ export default function Platforms() {
           {platforms.map((platform, index) => (
             <div
               key={index}
+              data-reveal
+              style={{ animationDelay: `${index * 0.1}s` }}
               className="group relative bg-gradient-to-br from-[#1a2940] to-[#0f1929] border border-white/5 p-10 text-center rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-[#e31e24]/50 hover:shadow-[0_15px_40px_rgba(227,30,36,0.1)] transition-all duration-500 cursor-pointer"
             >
               {/* Hover Gradient */}
